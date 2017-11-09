@@ -49,7 +49,7 @@ def collect_informative_column_information(input_file_path):
         column_seq = ''.join(letters)
         consensusing = Counter(column_seq)
         consensus_sequence.append(consensusing.most_common()[0][0])
-        if column_seq != letters[0] * len(species) and col > 200 and col < 1500:
+        if column_seq != letters[0] * len(species) and col > 100 and col < 1500:
             informative_columns[col] = column_seq
             print(column_seq, col + 1)
     species.append(Contig('Consensus', ''.join(consensus_sequence)))
